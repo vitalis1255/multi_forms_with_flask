@@ -2,3 +2,7 @@ form.username.label is because username is inside a form.
 This | means dot in jinja.
 {{data.plan.plan | capitalize }} ({{ data.plan.billing | capitalize }}). Get the data of a plan in a plan form and capitalize it. Get the data of a billing in a plan form and capitalize it.
 color: var(--cool-gray) css variable color.
+
+dump() method is used to serialize (convert) a python object into a specific data format and write it directly to a file.
+
+An indent=4 command tells a computer program or function to add an offset of four spaces at the beginning of lines or nested elements to make text or code easier to read.

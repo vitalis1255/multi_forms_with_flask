@@ -51,6 +51,11 @@
    <form method="POST" novalidate style="margin-top: 30px;">
     <!-- prevent hacking -->
      {{ form.hidden_tag() }}
+     <div class="button-group">
+      <a href="{{url_for('step_three')}}" class="btn-back">Go Back</a>
+      <!--Input type submit value is Confirm-->
+      {{form.submit(class="btn-next", value="Confirm")}}
+     </div>
    </form>
 </div>
 
