@@ -1,0 +1,55 @@
+{% extends 'multistep/layout.html' %}
+{% block title %}Pick Add-ons{% endblock %}
+{% block content %}
+
+<div>
+  <div class="form-header">
+    <h2>Pick Add-ons</h2>
+    <p>Add-ons Enhance your gaming experience.</p>
+  </div>
+  <form method="POST" novalidate>
+    <!-- Prevent our website from hacking -->
+    {{ form.hidden_tag() }}
+
+    <label class="addon-item">
+      <div class="addon-left">
+        {{ form.online_service }}
+        <div>
+          <div class="addon-title">Online service</div>
+          <div class="addon-desc">Access to multiplayer games</div>
+        </div>
+      </div>
+      <div class="addon-price">+$1/mo</div>
+    </label>
+
+    <label class="addon-item">
+      <div class="addon-left">
+        {{ form.large_storage }}
+        <div>
+          <div class="addon-title">Larger storage</div>
+          <div class="addon-desc">Extra 1TB of cloud save</div>
+        </div>
+      </div>
+      <div class="addon-price">+$2/mo</div>
+    </label>
+
+    <label class="addon-item">
+      <div class="addon-left">
+        {{ form.customizable_profile }}
+        <div>
+          <div class="addon-title">customizable profile</div>
+          <div class="addon-desc">Custom theme on your profile</div>
+        </div>
+      </div>
+      <div class="addon-price">+$2/mo</div>
+    </label>
+
+    <div class="button-group">
+      <a href="{{url_for('step_two')}}" class="btn-back">Go Back</a>
+      {{ form.submit(class="btn-next") }}
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

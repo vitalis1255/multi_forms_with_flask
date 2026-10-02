@@ -1,0 +1,57 @@
+{% extends 'multistep/layout.html' %}
+{% block title %}Summary Review{% endblock %}
+{% block content %}
+
+<div>
+  <div class="form-header">
+    <h2>Finishing up</h2>
+    <p>Double-check everything looks ok before confirming.</p>
+  </div>
+  <div class="summary-box">
+    <div class="summary-row">
+      <div>
+        <strong>
+          <!-- Step two summary -->
+          {{data.plan.plan | capitalize }} ({{ data.plan.billing | capitalize }})
+        </strong><br/>
+        <a href="{{url_for('step_two')}}" style="font-size: 13px; color: var(--cool-gray);">Change</a>
+      </div>
+      <div style="font-weight: 700; color: var(--primary-blue);">$9/mo</div>
+    </div>
+    <hr style="border: 0;border-top: 1px solid var(--light-gray); margin: 12px 0;"/>
+    <!-- Step three summary -->
+    {% if data.addons.online_service %}
+      <div class="summary-row" style="font-size: 14px; color: var(--cool-gray);">
+        <div>Online service</div>
+        <div style="color: var(--primary-blue);">+$1/mo</div>
+
+      </div>
+    {% endif %}
+    {% if data.addons.larger_storage %}
+     <div class="summary-row" style="font-size: 14px; color: var(--cool-gray);">
+      <div>Larger storage</div>
+      <div style="color: var(--primary-blue);">+$2/mo</div>
+     </div>
+    {% endif %}
+    {% if data.addons.customizable_profile %}
+    <div class="summary-row" style="font-size: 14px; color: var(--cool-gray);">
+      <div>Customizable profile</div>
+      <div style="color: var(--primary-blue);">+$2/mo</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="summary-row total" style="padding: 0 10px;">
+    <div>Total (per month)</div>
+    <div>+$12/mo</div>
+  </div>
+
+
+  <!-- Step One summary -->
+   <form method="POST" novalidate style="margin-top: 30px;">
+    <!-- prevent hacking -->
+     {{ form.hidden_tag() }}
+   </form>
+</div>
+
+{% endblock %}

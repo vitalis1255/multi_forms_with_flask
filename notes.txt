@@ -1,0 +1,4 @@
+form.username.label is because username is inside a form.
+This | means dot in jinja.
+{{data.plan.plan | capitalize }} ({{ data.plan.billing | capitalize }}). Get the data of a plan in a plan form and capitalize it. Get the data of a billing in a plan form and capitalize it.
+color: var(--cool-gray) css variable color.

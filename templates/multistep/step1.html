@@ -1,0 +1,51 @@
+{% extends 'multistep/layout.html' %}
+{% block title %}Personal Info{% endblock %}
+{% block content %}
+<div>
+  <div class="form-header">
+    <h2>Personal Info</h2>
+    <p>Please provide your name, email address, and phone number</p>
+  </div>
+
+  <!-- Using WTF -->
+   <form method="POST" novalidate>
+     <!-- Prevent our website from hacking -->
+     {{ form.hidden_tag() }}
+     <div class="input-group">
+       <!-- name label -->
+       {{ form.name.label }}
+       <!-- input field for name -->
+       {{form.name(placeholder="e.g stephen king")}}
+       <!-- check for errors in input name field -->
+       {% for error in form.name.errors %}
+         <span class="error-msg">{{ error }}</span>
+        {% endfor %}
+      </div>
+      <div class="input-group">
+        <!-- label for email -->
+        {{ form.email.label }}
+        <!-- input field for email -->
+        {{form.email(placeholder="e.g stephenking@lorem.com")}}
+        <!-- get error in email -->
+        {% for error in form.email.errors %}
+          <span class="error-msg">{{ error }}</span>
+        {% endfor %}
+      </div>
+      <div class="input-group">
+        <!-- phone label -->
+        {{ form.phone.label }}
+        <!-- input field for phone -->
+        {{ form.phone(placeholder="e.g 234 908 734 5635 ")}}
+        <!-- get email error -->
+        {% for error in form.phone.errors %}
+          <span class="error-msg">{{ error }}</span>
+        {% endfor %}
+      </div>
+      <div class="button-group">
+        <!-- input field for button -->
+        {{form.submit(class="btn-next")}}
+      </div>
+   </form>
+</div>
+
+{% endblock %}
