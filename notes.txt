@@ -6,3 +6,7 @@ color: var(--cool-gray) css variable color.
 dump() method is used to serialize (convert) a python object into a specific data format and write it directly to a file.
 
 An indent=4 command tells a computer program or function to add an offset of four spaces at the beginning of lines or nested elements to make text or code easier to read.
+
+
+PYTHONFLASK SESSION
+A session is a dictionary-like object used to store user-specific data across multiple browser requests.

@@ -87,9 +87,10 @@ def step_three():
 
   #check if addons info exists in session and form submission
   if 'addons_info' in session and not form.is_submitted():
-    form.online_service.data = session['addons_info'].get('online_service')
-    form.larger_storage.data = session['addons_info'].get('larger_storage')
-    form.customizable_profile.data = session['addons_info'].get('customizable_profile')
+    addons = session['addons_info']
+    form.online_service.data = addons.get('online_service')
+    form.larger_storage.data = addons.get('larger_storage')
+    form.customizable_profile.data = addons.get('customizable_profile')
 
   #if addons info exists
   if form.validate_on_submit():
@@ -151,7 +152,7 @@ def step_four():
       f"Thank you, {name}! Your application has been saved successfully."
     )
     return redirect(url_for('step_one'))
-  return render_template('multistep/step4.html',form=form,step=4)
+  return render_template('multistep/step4.html',form=form,data=summary_data, step=4)
 
 
 if __name__ == '__main__':

@@ -1,3 +1,4 @@
+/*Below is variable css i.e :root*/
 :root {
   --primary-blue: #022959;
   --purplish-blue: #483eff;
@@ -11,6 +12,7 @@
   --white: #ffffff;
 }
 
+/*A pllies to all pages*/
 * {
   box-sizing: border-box;
   margin: 0;

@@ -1,4 +1,4 @@
-{% extends 'multistep/layout.html' %}
+{% extends "multistep/layout.html" %}
 {% block title %}Summary Review{% endblock %}
 {% block content %}
 
@@ -26,14 +26,12 @@
         <div style="color: var(--primary-blue);">+$1/mo</div>
 
       </div>
-    {% endif %}
-    {% if data.addons.larger_storage %}
+    {% endif %} {% if data.addons.larger_storage %}
      <div class="summary-row" style="font-size: 14px; color: var(--cool-gray);">
       <div>Larger storage</div>
       <div style="color: var(--primary-blue);">+$2/mo</div>
      </div>
-    {% endif %}
-    {% if data.addons.customizable_profile %}
+    {% endif %} {% if data.addons.customizable_profile %}
     <div class="summary-row" style="font-size: 14px; color: var(--cool-gray);">
       <div>Customizable profile</div>
       <div style="color: var(--primary-blue);">+$2/mo</div>

@@ -1,0 +1,17 @@
+{
+    "personal": {
+        "email": "talentedvitalis@gmail.com",
+        "name": "izuchukwu",
+        "phone": "+2348066023002"
+    },
+    "plan": {
+        "billing": "monthly",
+        "plan": "arcade"
+    },
+    "addons": {
+        "customizable_profile": false,
+        "larger_storage": false,
+        "online_service": true
+    },
+    "submitted_at": "2026-10-0219:52:52"
+}
