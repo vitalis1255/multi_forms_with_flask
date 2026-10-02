@@ -1,0 +1,17 @@
+{
+    "personal": {
+        "email": "talentedvitalis@gmail.com",
+        "name": "vitalis onyeke",
+        "phone": "+2348066023002"
+    },
+    "plan": {
+        "billing": "yearly",
+        "plan": "pro"
+    },
+    "addons": {
+        "customizable_profile": true,
+        "larger_storage": false,
+        "online_service": false
+    },
+    "submitted_at": "2026-10-0220:04:15"
+}
